@@ -1,9 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_vault"></a> [vault](#requirement\_vault) | >= 3.20.0 |
+No Requirements
 
 ## Providers
 
