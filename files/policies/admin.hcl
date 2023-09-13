@@ -25,7 +25,7 @@ path "sys/namespaces/*" {
 
 # Create and manage identities
 path "identity/*" {
-  capbilities = ["create", "read", "update", "delete", "list"]
+  capabilities = ["create", "read", "update", "delete", "list"]
 }
 
 # Enable and manage authentication methods broadly across Vault
