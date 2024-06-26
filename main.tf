@@ -9,10 +9,13 @@ resource "vault_jwt_auth_backend" "default" {
   description        = var.oidc_description
   path               = var.oidc_path
   type               = "oidc"
-  oidc_discovery_url = var.oidc_discovery_url
+  oidc_discovery_url = "https://login.microsoftonline.com/${var.tenant_id}/v2.0"
   oidc_client_id     = var.oidc_client_id
   oidc_client_secret = var.oidc_client_secret
   default_role       = "default"
+  provider_config = {
+    provider = "azure"
+  }
   tune {
     listing_visibility = var.hide_oidc_mount ? "hidden" : "unauth"
     max_lease_ttl      = "12h"
@@ -26,7 +29,7 @@ resource "vault_jwt_auth_backend_role" "default" {
   backend               = vault_jwt_auth_backend.default.path
   role_name             = "default"
   token_policies        = ["default"]
-  user_claim            = "sub"
+  user_claim            = "email"
   groups_claim          = "groups"
   role_type             = "oidc"
   allowed_redirect_uris = ["http://localhost:8250/oidc/callback", "https://${var.vault_hostname}:8200/ui/vault/auth/${var.oidc_path}/oidc/callback"]

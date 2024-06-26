@@ -10,8 +10,8 @@ variable "oidc_path" {
   type        = string
 }
 
-variable "oidc_discovery_url" {
-  description = "OIDC discovery url, e.g. https://login.microsoftonline.com/your_tenant_id/v2.0."
+variable "tenant_id" {
+  description = "Azure tenant ID."
   type        = string
 }
 

@@ -1,7 +1,9 @@
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No Requirements
+| Name | Version |
+|------|---------|
+| <a name="requirement_vault"></a> [vault](#requirement\_vault) | >= 3.20.0 |
 
 ## Providers
 
@@ -33,9 +35,9 @@ No modules.
 | <a name="input_oidc_client_id"></a> [oidc\_client\_id](#input\_oidc\_client\_id) | This is the application ID of your registered application in Azure. | `string` | n/a | yes |
 | <a name="input_oidc_client_secret"></a> [oidc\_client\_secret](#input\_oidc\_client\_secret) | This is the value of the secret created in Certificates & secrets. | `string` | n/a | yes |
 | <a name="input_oidc_description"></a> [oidc\_description](#input\_oidc\_description) | Sets the auth method description in Vault. | `string` | `"OIDC authentication"` | no |
-| <a name="input_oidc_discovery_url"></a> [oidc\_discovery\_url](#input\_oidc\_discovery\_url) | OIDC discovery url, e.g. https://login.microsoftonline.com/your_tenant_id/v2.0. | `string` | n/a | yes |
 | <a name="input_oidc_group_alias_name"></a> [oidc\_group\_alias\_name](#input\_oidc\_group\_alias\_name) | This value must be the Object ID of the Azure AD group. | `string` | n/a | yes |
 | <a name="input_oidc_path"></a> [oidc\_path](#input\_oidc\_path) | Sets the mount path in Vault. | `string` | `"oidc"` | no |
+| <a name="input_tenant_id"></a> [tenant\_id](#input\_tenant\_id) | Azure tenant ID. | `string` | n/a | yes |
 | <a name="input_vault_hostname"></a> [vault\_hostname](#input\_vault\_hostname) | Vault hostname, e.g. 'vault.example.com' | `string` | n/a | yes |
 
 ## Outputs
