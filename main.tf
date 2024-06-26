@@ -33,7 +33,7 @@ resource "vault_jwt_auth_backend_role" "default" {
   groups_claim          = "groups"
   role_type             = "oidc"
   allowed_redirect_uris = ["http://localhost:8250/oidc/callback", "https://${var.vault_hostname}:8200/ui/vault/auth/${var.oidc_path}/oidc/callback"]
-  oidc_scopes           = ["https://graph.microsoft.com/.default"]
+  oidc_scopes           = ["profile"]
 }
 
 # 
